@@ -24,7 +24,8 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 
 <h3>Alert Details:<h3>
  
-<b>Alert Name:</b> Brute Force Activity Detection<br>
+<b>Alert Name:</b> Brute Force Activity Detection <br>
+
 <b>Time:</b> 17/09/2025 9:00:21 AM <br>
 <b>Target Host:</b> tryhackme-2404 <br>
 <b>Source IP:</b> 10.10.242.248 <br>
