@@ -33,7 +33,7 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 
 index="linux-alert" sourcetype="linux_secure" 10.10.242.248 <br>
 | search "Accepted password for" OR "Failed password for" OR "Invalid user"<br>
-| sort + _time </p><br>
+| sort + _time<br>
 
 index="linux-alert" sourcetype="linux_secure" 10.10.242.248<br>
 | rex field=_raw "^\d{4}-\d{2}-\d{2}T[^\s]+\s+(?<log_hostname>\S+)"<br>
