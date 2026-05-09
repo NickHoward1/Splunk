@@ -1,4 +1,4 @@
-<h1>Alert Triage with Splunk Lab</h1>
+<h1>Splunk Lab</h1>
 
 <h2>Objective</h2>
 To triage various alerts using the Splunk SIEM to determine whether alerts are true positives or false positives. I will do this by filtering and analysing the logs provided to identify anomalies, suspicious behaviour, and indicators of potential security incidents.
