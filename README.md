@@ -69,5 +69,13 @@ The first filter allowed me to see all successful and failed login attempt with 
 
 <h3>Alert Scenario:</h3>You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.
 
+<b>Alert Details:</b><br>
+<b>Alert Name:</b> Potential Task Scheduler Persistence Identified <br>
+<b>Time:</b> 30/08/2025 10:06:07 AM <br>
+<b>Host:</b> WIN-H015 <br>
+<b>User:</b> oliver.thompson <br>
+<b>Task Name:</b> AssessmentTaskOne <br>
+<b>Your job is to investigate this activity and decide whether it should be considered suspicious.</b>
+
 <h2>Outcome</h2>
 
