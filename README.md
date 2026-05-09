@@ -23,7 +23,7 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 <b>Alert scenario:</b> You’ve just started your first shift as a SOC analyst at an MSSP. Only a few minutes have passed since an alert about a possible brute force attack appeared on the platform.
 
 <b>Alert Details:</b><br>
-Alert Name:Brute Force Activity Detection <br>
+<b>Alert Name:</b> Brute Force Activity Detection <br>
 Time: 17/09/2025 9:00:21 AM <br>
 Target Host:tryhackme-2404 <br>
 Source IP: 10.10.242.248 <br>
