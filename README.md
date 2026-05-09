@@ -11,7 +11,7 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 <h2>Tasks Completed</h2>
 <ul>
  <li></li>
- <li>)</li>
+ <li></li>
  <li></li>
  <li></li>
  <li></li>
