@@ -56,11 +56,16 @@ The first filter allowed me to see all successful and failed login attempt with 
 
 <h3>Questions</h3>
 <b>How many failed login attempts were made on the user john.smith?</b><br>
-<b>Answer:</b> I used filter 2 and removed Accepted action which gave me the answer
+<b>Answer:</b> I used filter 2 and removed Accepted action which gave me the answer<br>
 
+<b>What was the duration of the brute force attack in minutes?</b><br>
+<b>Answer:</b> I compared the first failed log with the last which enabled me to get the answer<br>
 
+<b>What username was the attacker able to privilege escalate to?</b><br>
+<b>Answer:</b> I used filter index="linux-alert" sourcetype="linux_secure" "sudo" 
 
-
+<b>What is the name of the user account created by the attacker for persistence?</b><br>
+<b>Answer:</b> I used filter index="linux-alert" "*add*"
 
 <h2>Outcome</h2>
 
