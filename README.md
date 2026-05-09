@@ -29,11 +29,23 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 <b>Source IP:</b> 10.10.242.248 <br>
 <b>Your job is to investigate this activity and decide whether it should be considered suspicious.</b>
 
-<b>Filter used:</b> 
+<b>Filters used:</b> 
 
 index="linux-alert" sourcetype="linux_secure" 10.10.242.248 <br>
 | search "Accepted password for" OR "Failed password for" OR "Invalid user"<br>
-| sort + _time </p>
+| sort + _time </p><br>
+
+index="linux-alert" sourcetype="linux_secure" 10.10.242.248<br>
+| rex field=_raw "^\d{4}-\d{2}-\d{2}T[^\s]+\s+(?<log_hostname>\S+)"<br>
+| rex field=_raw "sshd\[\d+\]:\s*(?<action>Failed|Accepted)\s+\S+\s+for(?: invalid user)? (?<username>\S+) from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3})"<br>
+| eval process="sshd"<br>
+| stats count values(src_ip) as src_ip values(log_hostname) as hostname values(process) as process by username<br>
+
+index="linux-alert" sourcetype="linux_secure" 10.10.242.248<br>
+| rex field=_raw "^\d{4}-\d{2}-\d{2}T[^\s]+\s+(?<log_hostname>\S+)"<br>
+| rex field=_raw "sshd\[\d+\]:\s*(?<action>Failed|Accepted)\s+\S+\s+for(?: invalid user)? (?<username>\S+) from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3})"<br>
+| eval process="sshd"<br>
+| stats count values(action) values(src_ip) as src_ip values(log_hostname) as hostname values(process) as process  by username<br>
 
  <p>
 <img src= "https://github.com/NickHoward1/Splunk/blob/a0d3267627e038730a15d848de7b92c4d9618bd1/Screenshot%202026-05-09%20at%2018.05.51.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
