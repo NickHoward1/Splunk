@@ -29,5 +29,11 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 <b>Source IP:</b> 10.10.242.248 <br>
 <b>Your job is to investigate this activity and decide whether it should be considered suspicious.</b>
 
+Filter used: 
+
+<p style="font-family: Consolas, monospace; font-size: 16px;" > index="linux-alert" sourcetype="linux_secure" 10.10.242.248 
+| search "Accepted password for" OR "Failed password for" OR "Invalid user"
+| sort + _time</p>
+
 <h2>Outcome</h2>
 
