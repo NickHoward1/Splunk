@@ -30,11 +30,11 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 <b>Your job is to investigate this activity and decide whether it should be considered suspicious.</b>
 
 <b>Filter used:</b> 
-```spl
-index="linux-alert" sourcetype="linux_secure" 10.10.242.248 
-| search "Accepted password for" OR "Failed password for" OR "Invalid user"
+
+index="linux-alert" sourcetype="linux_secure" 10.10.242.248 <br>
+| search "Accepted password for" OR "Failed password for" OR "Invalid user"<br>
 | sort + _time </p>
-```
+
  <p>
 <img src= "https://github.com/NickHoward1/Splunk/blob/a0d3267627e038730a15d848de7b92c4d9618bd1/Screenshot%202026-05-09%20at%2018.05.51.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src= "" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src= "" width="300" height="300" /> 
