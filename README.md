@@ -65,7 +65,8 @@ The first filter allowed me to see all successful and failed login attempt with 
 <b>Answer:</b> I used filter index="linux-alert" sourcetype="linux_secure" "sudo"<br>
 
 <b>What is the name of the user account created by the attacker for persistence?</b><br>
-<b>Answer:</b> I used filter index="linux-alert" "*add*"
+<b>Answer:</b> I used filter index="linux-alert" "*add*"<br>
+
 
 <b>Alert Scenario:</b>You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.
 
