@@ -31,9 +31,9 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 
 Filter used: 
 
-<p style="font-family: Consolas, monospace; font-size: 16px;" index="linux-alert" sourcetype="linux_secure" 10.10.242.248 
+<p style="font-family: Consolas, monospace; font-size: 16px;"> index="linux-alert" sourcetype="linux_secure" 10.10.242.248 
 | search "Accepted password for" OR "Failed password for" OR "Invalid user"
-| sort + _time >
+| sort + _time </p>
 
 <h2>Outcome</h2>
 
