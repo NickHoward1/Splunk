@@ -1,4 +1,4 @@
-<h1Alert Triage with Splunk Lab</h1>
+<h1>Alert Triage with Splunk Lab</h1>
 
 <h2>Objective</h2>
 
@@ -9,12 +9,12 @@
 </ul>
 <h2>Tasks Completed</h2>
 <ul>
- <li>Create users/groups</li>
- <li>Assign roles (RBAC)</li>
- <li>Configure MFA</li>
- <li>Conditional access</li>
- <li>Review sign-in logs</li>
- <li>App Integration (SAML)</li>
+ <li></li>
+ <li>)</li>
+ <li></li>
+ <li></li>
+ <li></li>
+ <li></li>
 </ul>
 
 <h2>Screenshots</h2>
