@@ -67,7 +67,7 @@ The first filter allowed me to see all successful and failed login attempt with 
 <b>What is the name of the user account created by the attacker for persistence?</b><br>
 <b>Answer:</b> I used filter index="linux-alert" "*add*"
 
-<h3>Alert Scenario:</h3>h3>You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.
+<h3>Alert Scenario:</h3>You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.
 
 <h2>Outcome</h2>
 
