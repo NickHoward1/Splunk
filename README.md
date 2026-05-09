@@ -49,7 +49,7 @@ index="linux-alert" sourcetype="linux_secure" 10.10.242.248<br>
 
  <p>
 <img src= "https://github.com/NickHoward1/Splunk/blob/a0d3267627e038730a15d848de7b92c4d9618bd1/Screenshot%202026-05-09%20at%2018.05.51.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src= "" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src= "" width="300" height="300" /> 
+<img src= "https://github.com/NickHoward1/Splunk/blob/ed19ace4403fdbd9c271678049c0338729575c96/Screenshot%202026-05-09%20at%2019.54.41.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src= "" width="300" height="300" /> 
 </p>
 
 The first filter allowed me to see all successful and failed login attempt with the IP address 10.10.242.248, as well as 
