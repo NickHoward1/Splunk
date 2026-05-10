@@ -56,6 +56,7 @@ index="linux-alert" sourcetype="linux_secure" 10.10.242.248<br>
 The first filter allowed me to see all successful and failed login attempt with the IP address 10.10.242.248, as well as 
 
 <h3>Questions</h3>
+
 <b>How many failed login attempts were made on the user john.smith?</b><br>
 <b>Answer:</b>I used filter 2 and removed Accepted action which gave me the answer<br>
 
