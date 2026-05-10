@@ -136,11 +136,23 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 <b>Suspicious IP:</b> 171.251.232.40 <br>
 <b>Your job is to investigate this activity and decide whether it should be considered suspicious.</b>
 
+<b>Process:</b> The resource provided is the organisation’s website hosted on the web server. Next we want to look at the suspicious IP. We can use Virustotal.com or abuseipdb.com to check the status of the IP and whether it is malicious. Next we use the first filter below for deeper analysis.</b> 
+
+Right away, we can detect a large number of requests associated with this IP. The User-Agent is set to Hydra, a tool commonly used by attackers to perform brute force attempts. A clear indicator of malicious activity.</b> 
+
+Next we use the second filter below. A POST request was observed for admin-ajax.php with a referer pointing to theme-editor.php?file=b374k.php. This is unusual because the theme editor should not reference arbitrary .php files. The presence of file=b374k.php strongly suggests that the attacker may have uploaded or is interacting with a web shell. 
+
+
+
+
 <b>Filters used:</b> 
 
 index=web-alert 171.251.232.40<br>
 | table _time clientip useragent uri_path method status<br> 
 | sort + _time
+
+index=web-alert 171.251.232.40 useragent!="Mozilla/5.0 (Hydra)"<br> 
+| table  _time clientip useragent uri_path referer referer_domain method status<br> 
 
 index=web-alert 171.251.232.40 b374k.php<br> 
 | table _time clientip useragent uri_path referer referer_domain method status<br> 
@@ -154,18 +166,18 @@ index=web-alert 171.251.232.40 b374k.php<br>
 <h3>Questions</h3>
 
 <b>What time did the brute-force activity using Hydra begin?</b><br>
-<b>Answer:</b><br> 
-<b>Filter:</b><br> 
+<b>Answer:</b>2025-09-14 21:20:27<br> 
+<b>Filter:</b>First Filter<br> 
 <b>Why?:</b><br> 
 
 <b>Which user agent did the attacker use when interacting with the web shell?</b><br>
-<b>Answer:</b><br> 
-<b>Filter:</b><br>  
+<b>Answer:</b>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36<br> 
+<b>Filter:</b> Second Filter<br>  
 <b>Why?:</b><br> 
 <b>Note:</b><br> 
 
 <b>What was the number of requests made by the attacker to the server via the web shell?</b><br>
-<b>Answer:</b><br>  
+<b>Answer:</b>5<br>  
 <b>Filter:</b><br>  
 <b>Why?:</b><br>  
 <b>Note:</b>
