@@ -88,6 +88,8 @@ index="win-alert" EventCode=4698 AssessmentTaskOne<br>
 index="win-alert" ParentProcessId=4128<br>
 | table _time "ParentCommandLine"<br>
 
+index="win-alert" ParentProcessId=4128 "localgroup"<br>
+
 index="win-alert" EventCode=4624 name="An account was successfully logged on" workstation "oliver.thompson"
 
  <p>
@@ -99,24 +101,26 @@ index="win-alert" EventCode=4624 name="An account was successfully logged on" wo
 
 <b>What is the ProcessId of the process that created this malicious task?</b><br>
 <b>Answer:</b> 5816<br> 
-<b>Filter:</b> First filter (Searched within messsage)<br> 
-<b>why?:</b> I was asked to search for the process ID, for a SOC analayst this will allow me to investigate further and see what executable launched it,
+<b>Filter:</b> First Filter (Searched within messsage)<br> 
+<b>Why?:</b> I was asked to search for the process ID, for a SOC analayst this will allow me to investigate further and see what executable launched it,
 which user ran it, command-line arguments, parent/child processes, associated network connections, hashes and file paths. <br>
 
 <b>What is the name of the parent process for the process that created this malicious task?</b><br>
 <b>Answer:</b> cmd.exe<br> 
-<b>Filter:</b>  Second filter 
-<b>Why?:</b> Finding the parent process name will help me understand how the attack started, what launched the malware and whether it was user-driven, scripted, or automated.<br> <b>
+<b>Filter:</b>  Second Filter <br> 
+<b>Why?:</b> Finding the parent process name will help me understand how the attack started, what launched the malware and whether it was user-driven, scripted, or automated.<br>         <b>Note:</b> The malicous attack will not appear by itself, something will have created it and will look like... cmd.exe, powershell.exe, xscript.exe.<br> Once I have found the Process ID search for: - Parent Process Name - Command Line - User account - File path - Hash - Network activity
 
-Note:</b> The malicous attack will not appear by itself, something will have created it and will look like... cmd.exe, powershell.exe, xscript.exe.<br> Once I have found the Process ID: search for - Parent Process Name - Command Line - User account - File path - Hash - Network activity
-
-<b>Which local group did the attacker enumerate during discovery??</b><br>
+<b>Which local group did the attacker enumerate during discovery?</b><br>
 <b>Answer:</b> Administrators <br>
-<b> Filter:</b> 
-<b>Why?:</b> 
+<b>Filter:</b> Third Filter
+<b>Why?:</b> The look up was to see which local group the attacker looked up to gather information about the system. Trying to discover who has admin access, what users exist, privileges and how the system is configured, this gives them a better position to move laterally once they are in. <br>
+<b>Note:</b> Attackers usually run commands such as Get-LocalGroup or net Localgroup.
 
-<b>What is the name of the user account created by the attacker for persistence?</b><br>
-<b>Answer:</b> I used filter index="linux-alert" "*add*"<br>
+<b>What is the name of the workstation from which the Threat Actor logged into this host?</b><br>
+<b>Answer:</b> DEV-QA-SERVER <br>
+<b>Filter:</b> Last Filter 
+<b>Why?:</b> It is important to identify the workstation name so we can determine the source system the attacker used to gain access to the environment. This workstation may already be compromised, contain malware, be the initial infection point, or be used for lateral movement across the network. As a SOC Level 1 Analyst, I would escalate the incident to the SOC Level 2 team and begin the remediation process by helping contain the threat, such as isolating the affected host to prevent further spread across the environment. This would then support the eradication and recovery phases of the incident response process.
+
 
 <h2>Outcome</h2>
 
