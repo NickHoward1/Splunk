@@ -96,7 +96,7 @@ The first filter allowed me to see all successful and failed login attempt with 
 
 <b>What is the ProcessId of the process that created this malicious task?</b><br>
 <b>Answer:</b> 5816<br> 
-<b>Filter:</b> First filter (Searched within messsage)
+<b>Filter:</b> First filter (Searched within messsage)<br> 
 <b>why?:</b> I was asked to search for the process ID, for a SOC analayst this will allow me to investigate further and see what executable launched it,
 which user ran it, command-line arguments, parent/child processes, associated network connections, hashes and file paths. <br>
 
