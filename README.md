@@ -95,11 +95,11 @@ index="win-alert" EventCode=4624 name="An account was successfully logged on" wo
 <h3>Questions</h3>
 
 <b>What is the ProcessId of the process that created this malicious task?</b><br>
-<b>Answer:</b> 5816 <b>why?:</b> I was asked to search for the process ID, for a SOC analayst this will allow me to investiagte further and see what executable launched it,
+<b>Answer:</b> 5816<br> <b>why?:</b> I was asked to search for the process ID, for a SOC analayst this will allow me to investiagte further and see what executable launched it,
 which user ran it, command-line arguments, parent/child processes, associated network connections, hashes and file paths. <br>
 
 <b>What is the name of the parent process for the process that created this malicious task?</b><br>
-<b>Answer:</b> cmd.exe <b>Why?:</b> Finding the parent process name will help me understand how the attack started, what launched the malware and whether it was user-driven, scripted, or automated. <b>Note:</b> The malicous attack will not appear by itself, something will have created it and will look like... cmd.exe, powershell.exe, xscript.exe.<br>
+<b>Answer:</b> cmd.exe<br> <b>Why?:</b> Finding the parent process name will help me understand how the attack started, what launched the malware and whether it was user-driven, scripted, or automated.<br> <b>Note:</b> The malicous attack will not appear by itself, something will have created it and will look like... cmd.exe, powershell.exe, xscript.exe.<br>
 
 <b>Process:</b> Once I have found the Process ID: search for - Parent Process Name - Command Line - User account - File path - Hash - Network activity
 
