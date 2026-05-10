@@ -162,10 +162,10 @@ index=web-alert 171.251.232.40 b374k.php<br>
 
 <h3>Questions</h3>
 
-<b>What time did the brute-force activity using Hydra begin?</b><br>
-<b>Answer:</b>2025-09-14 21:20:27<br> 
-<b>Filter:</b>First Filter<br> 
-<b>Why?:</b>It's important to know the times of the attack so we can establish timelines and identify initial compromise attempts<br> 
+<b>What time did the brute-force activity using Hydra begin?</b> <br>
+<b>Answer:</b> 2025-09-14 21:20:27 <br> 
+<b>Filter:</b> First Filter <br> 
+<b>Why?:</b> It's important to know the times of the attack so we can establish timelines and identify initial compromise attempts <br> 
 
 <b>Which user agent did the attacker use when interacting with the web shell?</b><br>
 <b>Answer:</b>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36<br> 
