@@ -80,5 +80,32 @@ The first filter allowed me to see all successful and failed login attempt with 
 <b>Task Name:</b> AssessmentTaskOne <br>
 <b>Your job is to investigate this activity and decide whether it should be considered suspicious.</b>
 
+<b>Filters used:</b> 
+
+index="win-alert" EventCode=4698 AssessmentTaskOne<br>
+| table _time EventCode user_name host Task_Name Message<br>
+
+index="win-alert" EventCode=4624 name="An account was successfully logged on" workstation "oliver.thompson"
+
+ <p>
+<img src= "" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src= "" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src= "" width="300" height="300" /> 
+</p>
+
+<h3>Questions</h3>
+
+<b>What is the ProcessId of the process that created this malicious task?</b><br>
+<b>Answer:</b> 5816, <b>why?:</b> I was asked to search for the process ID, for a SOC analayst this will allow me to investiagte further and seewhat executable launched it,
+which user ran it, command-line arguments, parent/child processes, associated network connections, hashes and file paths. <br>
+
+<b>What is the name of the parent process for the process that created this malicious task??</b><br>
+<b>Answer:</b> <br>
+
+<b>Which local group did the attacker enumerate during discovery??</b><br>
+<b>Answer:</b><br>
+
+<b>What is the name of the user account created by the attacker for persistence?</b><br>
+<b>Answer:</b> I used filter index="linux-alert" "*add*"<br>
+
 <h2>Outcome</h2>
 
