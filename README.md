@@ -127,15 +127,14 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 
 
 <h2>Alert Scenario:</h2>
-<p></p> </p>
+<p>Your shift as an L1 SOC analyst continues, and you’ve now received the next alert that needs to be investigated. This time, the activity is related to the web.</p>
 
 <b>Alert Details:</b><br>
-<b>Alert Name:</b>  <br>
-<b>Time:</b> <br>
-<b>Host:</b>  <br>
-<b>User:</b>  <br>
-<b>Task Name:</b>  <br>
-<b></b>
+<b>Alert Name:</b> Potential Web Shell Upload Detected <br>
+<b>Time:</b> 14/09/2025 09:31:51 AM <br>
+<b>Resource:</b> http://web.trywinme.thm <br>
+<b>Suspicious IP:</b> 171.251.232.40 <br>
+<b>Your job is to investigate this activity and decide whether it should be considered suspicious.</b>
 
 <b>Filters used:</b> 
 
@@ -146,24 +145,18 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 
 <h3>Questions</h3>
 
-<b></b><br>
+<b><What time did the brute-force activity using Hydra begin?</b><br>
 <b>Answer:</b><br> 
 <b>Filter:</b> <br> 
 <b>Why?:</b> 
 
-<b></b><br>
+<b><Which user agent did the attacker use when interacting with the web shell?</b><br>
 <b>Answer:</b> 
 <b>Filter:</b> 
 <b>Why?:</b> 
 <b>Note:</b>
 
-<b></b><br>
-<b>Answer:</b> 
-<b>Filter:</b> 
-<b>Why?:</b> 
-<b>Note:</b>
-
-<b></b><br>
+<b>What was the number of requests made by the attacker to the server via the web shell?</b><br>
 <b>Answer:</b> 
 <b>Filter:</b> 
 <b>Why?:</b> 
