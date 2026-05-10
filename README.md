@@ -10,12 +10,9 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 </ul>
 <h2>Tasks Completed</h2>
 <ul>
- <li></li>
- <li></li>
- <li></li>
- <li></li>
- <li></li>
- <li></li>
+ <li>Triaging a Brute Force attack</li>
+ <li>Triaging an attack that has Persistence Identified</li>
+ <li>Triaging a webshell attack</li>
 </ul>
 
 <h2>Screenshots</h2>
@@ -136,13 +133,13 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 <b>Suspicious IP:</b> 171.251.232.40 <br>
 <b>Your job is to investigate this activity and decide whether it should be considered suspicious.</b>
 
-<b>Process:</b> The resource provided is the organisation’s website hosted on the web server. Next we want to look at the suspicious IP. We can use Virustotal.com or abuseipdb.com to check the status of the IP and whether it is malicious. Next we use the first filter below for deeper analysis.</b> 
+<b>Process:</b> The resource provided is the organisation’s website hosted on the web server. Next, we want to investigate the suspicious IP address. We can use tools such as VirusTotal or AbuseIPDB to check the reputation of the IP address and determine whether it is considered malicious. We then use the first filter below for deeper analysis.
 
-Right away, we can detect a large number of requests associated with this IP. The User-Agent is set to Hydra, a tool commonly used by attackers to perform brute force attempts. A clear indicator of malicious activity.</b> 
+Right away, we can detect a large number of requests associated with this IP address. The User-Agent is set to Hydra, a tool commonly used by attackers to carry out brute-force attacks, which is a strong indicator of malicious activity.
 
-Next we use the second filter below. A POST request was observed for admin-ajax.php with a referer pointing to theme-editor.php?file=b374k.php. This is unusual because the theme editor should not reference arbitrary .php files. The presence of file=b374k.php strongly suggests that the attacker may have uploaded or is interacting with a web shell. 
+Next, we use the second filter below. A POST request was observed for admin-ajax.php with a referrer pointing to theme-editor.php?file=b374k.php. This is unusual because the theme editor should not normally reference arbitrary .php files. The presence of file=b374k.php strongly suggests that the attacker may have uploaded or is interacting with a web shell.
 
-
+Finally, using the last filter, we detected that the threat actor successfully gained access to a possible web shell file named b374k.php. Following this, they began executing activity through the shell, where we observed four successful POST requests.
 
 
 <b>Filters used:</b> 
@@ -168,19 +165,18 @@ index=web-alert 171.251.232.40 b374k.php<br>
 <b>What time did the brute-force activity using Hydra begin?</b><br>
 <b>Answer:</b>2025-09-14 21:20:27<br> 
 <b>Filter:</b>First Filter<br> 
-<b>Why?:</b><br> 
+<b>Why?:</b>It's important to know the times of the attack so we can establish timelines and identify initial compromise attempts<br> 
 
 <b>Which user agent did the attacker use when interacting with the web shell?</b><br>
 <b>Answer:</b>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36<br> 
 <b>Filter:</b> Second Filter<br>  
-<b>Why?:</b><br> 
-<b>Note:</b><br> 
+<b>Why?:</b> knowing the user agent will help me as a SOC Level1 Analyst to understand how the attacker interacted with the compromised system<br> 
 
 <b>What was the number of requests made by the attacker to the server via the web shell?</b><br>
-<b>Answer:</b>5<br>  
-<b>Filter:</b><br>  
-<b>Why?:</b><br>  
-<b>Note:</b>
+<b>Answer:</b>4<br>  
+<b>Filter:</b> Last Filter - 4 POST requests under method<br>  
+<b>Why?:</b> Understand the number of POST requests allows me to understand how active the attacker was
+what level of interaction occurred, whether commands were executed, possible data exfiltration, persistence or post-exploitation activity <br>  
 
 
 <h2>Outcome</h2>
