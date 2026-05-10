@@ -169,7 +169,7 @@ index=web-alert 171.251.232.40 b374k.php<br>
 
 <b>Which user agent did the attacker use when interacting with the web shell?</b><br>
 <b>Answer:</b>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36<br> 
-<b>Filter:</b> Second Filter 
+<b>Filter:</b> Second Filter <br>
 <b>Why?:</b> knowing the user agent will help me as a SOC Level1 Analyst to understand how the attacker interacted with the compromised system<br> 
 
 <b>What was the number of requests made by the attacker to the server via the web shell?</b> <br>
