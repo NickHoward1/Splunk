@@ -91,7 +91,7 @@ index="win-alert" ParentProcessId=4128<br>
 index="win-alert" EventCode=4624 name="An account was successfully logged on" workstation "oliver.thompson"
 
  <p>
-<img src= "https://github.com/NickHoward1/Splunk/blob/fc940558751e0a6571a0b489f22bd47baf52bb2c/Screenshot%202026-05-10%20at%2011.20.51.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src= "https://github.com/NickHoward1/Splunk/blob/fc940558751e0a6571a0b489f22bd47baf52bb2c/Screenshot%202026-05-10%20at%2011.20.51.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src= ""/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src= "https://github.com/NickHoward1/Splunk/blob/cc71fb2dd8eb4d6cf8dfa6d447a1db62fed69b73/Screenshot%202026-05-10%20at%2011.18.35.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
