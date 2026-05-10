@@ -82,10 +82,13 @@ The first filter allowed me to see all successful and failed login attempt with 
 
 <b>Filters used:</b> 
 
-1.index="win-alert" EventCode=4698 AssessmentTaskOne<br>
+index="win-alert" EventCode=4698 AssessmentTaskOne<br>
 | table _time EventCode user_name host Task_Name Message<br>
 
-2.index="win-alert" EventCode=4624 name="An account was successfully logged on" workstation "oliver.thompson"
+index="win-alert" ParentProcessId=4128<br>
+| table _time "ParentCommandLine"<br>
+
+index="win-alert" EventCode=4624 name="An account was successfully logged on" workstation "oliver.thompson"
 
  <p>
 <img src= "https://github.com/NickHoward1/Splunk/blob/fc940558751e0a6571a0b489f22bd47baf52bb2c/Screenshot%202026-05-10%20at%2011.20.51.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -102,7 +105,7 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 
 <b>What is the name of the parent process for the process that created this malicious task?</b><br>
 <b>Answer:</b> cmd.exe<br> 
-<b>Filter:</b> 
+<b>Filter:</b>  Second filter 
 <b>Why?:</b> Finding the parent process name will help me understand how the attack started, what launched the malware and whether it was user-driven, scripted, or automated.<br> <b>
 
 Note:</b> The malicous attack will not appear by itself, something will have created it and will look like... cmd.exe, powershell.exe, xscript.exe.<br> Once I have found the Process ID: search for - Parent Process Name - Command Line - User account - File path - Hash - Network activity
