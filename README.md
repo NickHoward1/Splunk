@@ -1,7 +1,7 @@
 <h1>Splunk Lab</h1>
 
 <h2>Objective</h2>
-To triage various alerts using the Splunk SIEM to determine whether alerts are true positives or false positives. I will do this by filtering and analysing the logs provided to identify anomalies, suspicious behaviour, and indicators of potential security incidents.
+To triage various alerts using the Splunk SIEM to determine whether alerts are true positives or false positives. I will do this by filtering and analysing the logs provided to identify anomalies, suspicious behaviour, and indicators of potential security incidents.<br>
 
 <h2>Environment</h2>
 <ul>
@@ -42,32 +42,36 @@ index="linux-alert" sourcetype="linux_secure" 10.10.242.248<br>
 | eval process="sshd"<br>
 | stats count values(src_ip) as src_ip values(log_hostname) as hostname values(process) as process by username<br>
 
-index="linux-alert" sourcetype="linux_secure" 10.10.242.248<br>
-| rex field=_raw "^\d{4}-\d{2}-\d{2}T[^\s]+\s+(?<log_hostname>\S+)"<br>
-| rex field=_raw "sshd\[\d+\]:\s*(?<action>Failed|Accepted)\s+\S+\s+for(?: invalid user)? (?<username>\S+) from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3})"<br>
-| eval process="sshd"<br>
-| stats count values(action) values(src_ip) as src_ip values(log_hostname) as hostname values(process) as process  by username<br>
+index="linux-alert" sourcetype="linux_secure" "sudo"<br>
+
+index="linux-alert" "*add*"<br>
 
  <p>
 <img src= "https://github.com/NickHoward1/Splunk/blob/a0d3267627e038730a15d848de7b92c4d9618bd1/Screenshot%202026-05-09%20at%2018.05.51.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src= "https://github.com/NickHoward1/Splunk/blob/ed19ace4403fdbd9c271678049c0338729575c96/Screenshot%202026-05-09%20at%2019.54.41.png" width="300" height="300"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src= "https://github.com/NickHoward1/Splunk/blob/732a2d8a9b459c6a2fb62b6ba2618cda5ac05f89/Screenshot%202026-05-09%20at%2020.19.43.png" width="300" height="300" /> 
 </p>
 
-The first filter allowed me to see all successful and failed login attempt with the IP address 10.10.242.248, as well as 
-
 <h3>Questions</h3>
 
 <b>How many failed login attempts were made on the user john.smith?</b><br>
-<b>Answer:</b>I used filter 2 and removed Accepted action which gave me the answer<br>
+<b>Answer:</b> 500 <br>
+<b>Filter:</b> Second Filter provided (removed accepted action)<br>
+<b>Why?:</b>
 
 <b>What was the duration of the brute force attack in minutes?</b><br>
-<b>Answer:</b> I compared the first failed log with the last which enabled me to get the answer<br>
+<b>Answer:</b> 5 minutes<br>
+<b>Filter:</b> I compared the first failed log with the last which enabled me to get the answer<br>
+<b>Why?:</b> 
 
 <b>What username was the attacker able to privilege escalate to?</b><br>
-<b>Answer:</b> I used filter index="linux-alert" sourcetype="linux_secure" "sudo"<br>
+<b>Answer:</b> Root <br>
+<b>Filter:</b> Third Filter <br>
+<b>Why?:</b> 
 
 <b>What is the name of the user account created by the attacker for persistence?</b><br>
-<b>Answer:</b> I used filter index="linux-alert" "*add*"<br>
+<b>Answer:</b> system-utm <br>
+<b>Filter:</b> Last Filter <br>
+<b>Why?:</b>
 
 <h2>Alert Scenario:</h2>
 <p></p>You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.</p>
@@ -112,13 +116,13 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 
 <b>Which local group did the attacker enumerate during discovery?</b><br>
 <b>Answer:</b> Administrators <br>
-<b>Filter:</b> Third Filter
+<b>Filter:</b> Third Filter<br>
 <b>Why?:</b> The look up was to see which local group the attacker looked up to gather information about the system. Trying to discover who has admin access, what users exist, privileges and how the system is configured, this gives them a better position to move laterally once they are in. <br>
 <b>Note:</b> Attackers usually run commands such as Get-LocalGroup or net Localgroup.
 
 <b>What is the name of the workstation from which the Threat Actor logged into this host?</b><br>
 <b>Answer:</b> DEV-QA-SERVER <br>
-<b>Filter:</b> Last Filter 
+<b>Filter:</b> Last Filter <br>
 <b>Why?:</b> It is important to identify the workstation name so we can determine the source system the attacker used to gain access to the environment. This workstation may already be compromised, contain malware, be the initial infection point, or be used for lateral movement across the network. As a SOC Level 1 Analyst, I would escalate the incident to the SOC Level 2 team and begin the remediation process by helping contain the threat, such as isolating the affected host to prevent further spread across the environment. This would then support the eradication and recovery phases of the incident response process.
 
 
