@@ -138,6 +138,14 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 
 <b>Filters used:</b> 
 
+index=web-alert 171.251.232.40<br>
+| table _time clientip useragent uri_path method status<br> 
+| sort + _time
+
+index=web-alert 171.251.232.40 b374k.php<br> 
+| table _time clientip useragent uri_path referer referer_domain method status<br> 
+| sort + _time
+
  <p>
 <img src= ""/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src= ""/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src= ""/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
