@@ -53,22 +53,22 @@ index="linux-alert" "*add*"<br>
 <b>How many failed login attempts were made on the user john.smith?</b><br>
 <b>Answer:</b> 500 <br>
 <b>Filter:</b> Second Filter provided (removed accepted action)<br>
-<b>Why?:</b>
+<b>Why?: It is important to identify how many failed login attempts were made so that you can distinguish between normal authentication activity and unusual behaviour within the environment. A high number of failed login attempts could indicate a possible brute-force attack or compromised account, which would require immediate investigation. From there, the SOC team can determine whether the activity is malicious, assess the impact on the user account, and begin the appropriate response and remediation process.n</b>
 
 <b>What was the duration of the brute force attack in minutes?</b><br>
 <b>Answer:</b> 5 minutes<br>
 <b>Filter:</b> I compared the first failed log with the last which enabled me to get the answer<br>
-<b>Why?:</b> 
+<b>Why?:We can understand the extent of the attack and whether there were multiple attempts under a short period of time, it allow me to know the intensity of the attack, whether it was automated, how quick the attacker was getting a better idea of what sort of threat actor we are dealing with and the scope of the attack. </b> 
 
 <b>What username was the attacker able to privilege escalate to?</b><br>
 <b>Answer:</b> Root <br>
 <b>Filter:</b> Third Filter <br>
-<b>Why?:</b> 
+<b>Why?:It is critical to find out if the attacker was able to privilege escalate so we can determine how much access the attacker gained, what systems/data may be affected and if there was any possible lateral movement within the system </b> 
 
 <b>What is the name of the user account created by the attacker for persistence?</b><br>
 <b>Answer:</b> system-utm <br>
 <b>Filter:</b> Last Filter <br>
-<b>Why?:</b>
+<b>Why?:</b> It key to know the user account created as they could possibly return later without re-exploiting the system avoiding detection using legitimate login, moving laterally and creating backdoor to go unnoticed. 
 
 <h2>Alert Scenario:</h2>
 <p></p>You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.</p>
@@ -179,4 +179,4 @@ index=web-alert 171.251.232.40 b374k.php<br>
 
 
 <h2>Outcome</h2>
-
+During this lab with TryHackMe, I developed a better understanding of how to apply filters in Splunk to search through logs and identify crucial information during an investigation. This helped me confirm whether alerts were true positives while also understanding how the attack occurred and how the evidence within the logs led to that conclusion. More importantly, the lab improved my ability to spot anomalies and unusual behaviour within the data, allowing me to distinguish between different types of attacks and recognise indicators of suspicious or malicious activity.
