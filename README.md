@@ -21,7 +21,7 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 <h2>Screenshots</h2>
 
 <h2>Alert Scenario:</h2>
-You’ve just started your first shift as a SOC analyst at an MSSP. Only a few minutes have passed since an alert about a possible brute force attack appeared on the platform. <br>
+<p></p>You’ve just started your first shift as a SOC analyst at an MSSP. Only a few minutes have passed since an alert about a possible brute force attack appeared on the platform.</p>
 
 <b>Alert Details:</b><br>
 <b>Alert Name:</b> Brute Force Activity Detection <br>
