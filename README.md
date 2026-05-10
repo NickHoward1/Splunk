@@ -126,5 +126,49 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 <b>Why?:</b> It is important to identify the workstation name so we can determine the source system the attacker used to gain access to the environment. This workstation may already be compromised, contain malware, be the initial infection point, or be used for lateral movement across the network. As a SOC Level 1 Analyst, I would escalate the incident to the SOC Level 2 team and begin the remediation process by helping contain the threat, such as isolating the affected host to prevent further spread across the environment. This would then support the eradication and recovery phases of the incident response process.
 
 
+<h2>Alert Scenario:</h2>
+<p></p> </p>
+
+<b>Alert Details:</b><br>
+<b>Alert Name:</b>  <br>
+<b>Time:</b> <br>
+<b>Host:</b>  <br>
+<b>User:</b>  <br>
+<b>Task Name:</b>  <br>
+<b></b>
+
+<b>Filters used:</b> 
+
+ <p>
+<img src= ""/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src= ""/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src= ""/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<h3>Questions</h3>
+
+<b></b><br>
+<b>Answer:</b><br> 
+<b>Filter:</b> <br> 
+<b>Why?:</b> 
+
+<b></b><br>
+<b>Answer:</b> 
+<b>Filter:</b> 
+<b>Why?:</b> 
+<b>Note:</b>
+
+<b></b><br>
+<b>Answer:</b> 
+<b>Filter:</b> 
+<b>Why?:</b> 
+<b>Note:</b>
+
+<b></b><br>
+<b>Answer:</b> 
+<b>Filter:</b> 
+<b>Why?:</b> 
+<b>Note:</b>
+
+
 <h2>Outcome</h2>
 
