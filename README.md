@@ -173,10 +173,10 @@ index=web-alert 171.251.232.40 b374k.php<br>
 <b>Why?:</b> knowing the user agent will help me as a SOC Level1 Analyst to understand how the attacker interacted with the compromised system<br> 
 
 <b>What was the number of requests made by the attacker to the server via the web shell?</b><br>
-<b>Answer:</b>4<br>  
+<b>Answer:</b> 4<br>  
 <b>Filter:</b> Last Filter - 4 POST requests under method<br>  
 <b>Why?:</b> Understand the number of POST requests allows me to understand how active the attacker was
-what level of interaction occurred, whether commands were executed, possible data exfiltration, persistence or post-exploitation activity <br>  
+what level of interaction occurred, whether commands were executed, possible data exfiltration, persistence or post-exploitation activity<br>  
 
 
 <h2>Outcome</h2>
