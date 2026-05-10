@@ -145,21 +145,21 @@ which user ran it, command-line arguments, parent/child processes, associated ne
 
 <h3>Questions</h3>
 
-<b>What time did the brute-force activity using Hydra begin?</b><br>
-<b>Answer:</b><br> 
-<b>Filter:</b><br> 
+<b>What time did the brute-force activity using Hydra begin?</b>< br>
+<b>Answer:</b> <br> 
+<b>Filter:</b> <br> 
 <b>Why?:</b> 
 
-<b><Which user agent did the attacker use when interacting with the web shell?</b><br>
-<b>Answer:</b><br> 
-<b>Filter:</b><br>  
-<b>Why?:</b><br> 
+<b>Which user agent did the attacker use when interacting with the web shell?</b> <br>
+<b>Answer:</b> <br> 
+<b>Filter:</b> <br>  
+<b>Why?:</b> <br> 
 <b>Note:</b>
 
-<b>What was the number of requests made by the attacker to the server via the web shell?</b><br>
-<b>Answer:</b><br>  
-<b>Filter:</b><br>  
-<b>Why?:</b><br>  
+<b>What was the number of requests made by the attacker to the server via the web shell?</b> <br>
+<b>Answer:</b> <br>  
+<b>Filter:</b> <br>  
+<b>Why?:</b> <br>  
 <b>Note:</b>
 
 
