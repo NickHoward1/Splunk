@@ -20,7 +20,8 @@ To triage various alerts using the Splunk SIEM to determine whether alerts are t
 
 <h2>Screenshots</h2>
 
-<b>Alert scenario:</b> You’ve just started your first shift as a SOC analyst at an MSSP. Only a few minutes have passed since an alert about a possible brute force attack appeared on the platform.<br>
+<h2>Alert Scenario:<h2>
+You’ve just started your first shift as a SOC analyst at an MSSP. Only a few minutes have passed since an alert about a possible brute force attack appeared on the platform.<br>
 
 <b>Alert Details:</b><br>
 <b>Alert Name:</b> Brute Force Activity Detection <br>
@@ -67,8 +68,8 @@ The first filter allowed me to see all successful and failed login attempt with 
 <b>What is the name of the user account created by the attacker for persistence?</b><br>
 <b>Answer:</b> I used filter index="linux-alert" "*add*"<br>
 
-
-<b>Alert Scenario:</b>You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.
+<h2>Alert Scenario:<h2>
+You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.
 
 <b>Alert Details:</b><br>
 <b>Alert Name:</b> Potential Task Scheduler Persistence Identified <br>
