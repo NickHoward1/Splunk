@@ -69,7 +69,7 @@ The first filter allowed me to see all successful and failed login attempt with 
 <b>Answer:</b> I used filter index="linux-alert" "*add*"<br>
 
 <h2>Alert Scenario:</h2>
-You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.<br>
+<p></p>You are working as a Level 1 SOC Analyst on shift at an MSSP. An alert has come through indicating that a suspicious scheduled task was created on a host.</p>
 
 <b>Alert Details:</b><br>
 <b>Alert Name:</b> Potential Task Scheduler Persistence Identified <br>
